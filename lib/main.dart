@@ -10,75 +10,89 @@ class XylophoneApp extends StatelessWidget {
     final player = AudioPlayer();
     await player.play(AssetSource('note$soundNumber.wav'));
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              ElevatedButton(
-                onPressed: () async {
-                  playSound(1);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    playSound(1);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                  ),
+                  child: null,
                 ),
-                child: Text('Click me'),
               ),
-              ElevatedButton(
-                onPressed: () async {
-                  playSound(2);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange,
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    playSound(2);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                  ),
+                  child: null,
                 ),
-                child: Text('Click me'),
               ),
-              ElevatedButton(
-                onPressed: () async {
-                  playSound(3);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.yellow,
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    playSound(3);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.yellow,
+                  ),
+                  child: null,
                 ),
-                child: Text('Click me'),
               ),
-              ElevatedButton(
-                onPressed: () async {
-                  playSound(4);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    playSound(4);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
+                  child: null,
                 ),
-                child: Text('Click me'),
               ),
-              ElevatedButton(
+              Expanded(
+                  child: ElevatedButton(
                 onPressed: () async {
                   playSound(5);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.cyan,
                 ),
-                child: Text('Click me'),
-              ),
-              ElevatedButton(
+                child: null,
+              )),
+              Expanded(
+                  child: ElevatedButton(
                 onPressed: () async {
                   playSound(6);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                 ),
-                child: Text('Click me'),
-              ),
-              ElevatedButton(
-                onPressed: () async {
-                  playSound(7);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.purple,
+                child: null,
+              )),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () async {
+                    playSound(7);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                  ),
+                  child: null,
                 ),
-                child: Text('Click me'),
               ),
             ],
           ),
