@@ -6,6 +6,10 @@ void main() {
 }
 
 class XylophoneApp extends StatelessWidget {
+  void playSound(int soundNumber) async {
+    final player = AudioPlayer();
+    await player.play(AssetSource('note$soundNumber.wav'));
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,8 +19,7 @@ class XylophoneApp extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource('note1.wav'));
+                  playSound(1);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
@@ -25,8 +28,7 @@ class XylophoneApp extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource('note2.wav'));
+                  playSound(2);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange,
@@ -35,8 +37,7 @@ class XylophoneApp extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource('note3.wav'));
+                  playSound(3);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.yellow,
@@ -45,8 +46,7 @@ class XylophoneApp extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource('note4.wav'));
+                  playSound(4);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
@@ -55,8 +55,7 @@ class XylophoneApp extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource('note5.wav'));
+                  playSound(5);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.cyan,
@@ -65,8 +64,7 @@ class XylophoneApp extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource('note6.wav'));
+                  playSound(6);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -75,8 +73,7 @@ class XylophoneApp extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(AssetSource('note7.wav'));
+                  playSound(7);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.purple,
